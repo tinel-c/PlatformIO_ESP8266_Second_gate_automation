@@ -23,22 +23,29 @@ Also allows led strips to be commanded with mqtt commands.
 
 * Commands accepted
 
+```
 SecondGate/CMD/Relay1               ON / OFF
 SecondGate/CMD/Relay2               ON / OFF
 SecondGate/CMD/Relay3               ON / OFF
 SecondGate/CMD/Relay4               ON / OFF
 SecondGate/CMD/Relay5               ON / OFF
 SecondGate/CMD/Relay6               ON / OFF
+```
 
 * Status reports
 
+```
 SecondGate/STAT/Relay1              ON / OFF
 SecondGate/STAT/Relay2              ON / OFF
 SecondGate/STAT/Relay3              ON / OFF
 SecondGate/STAT/Relay4              ON / OFF
 SecondGate/STAT/Relay5              ON / OFF
 SecondGate/STAT/Relay6              ON / OFF
+```
+
 
 * Debug messages
 
+```
 SecondGate/STAT/message
+```
