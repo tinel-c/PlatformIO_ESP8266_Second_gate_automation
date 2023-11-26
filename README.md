@@ -19,7 +19,13 @@ Also allows led strips to be commanded with mqtt commands.
 * ESP8266 4 relay board to automate the gate motor
 * 2 FR120n mosfet modules to power the led strips
 
-### MQTT command structure
+## Configuration
+
+Take password.h_template and rename to password.h as a file.
+Configure the network and ip for the mqtt server inside the file.
+Compile and upload to the board.
+
+## MQTT command structure
 
 * Commands accepted
 
@@ -50,6 +56,6 @@ SecondGate/STAT/Relay6              ON / OFF
 SecondGate/STAT/message
 ```
 
-### Node-RED command structure
+## Node-RED command structure
 
 ![Automation box image](https://github.com/tinel-c/PlatformIO_ESP8266_Second_gate_automation/blob/main/img/Node_red_automation.PNG?raw=true)
