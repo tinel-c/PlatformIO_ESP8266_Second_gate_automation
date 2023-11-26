@@ -49,3 +49,7 @@ SecondGate/STAT/Relay6              ON / OFF
 ```
 SecondGate/STAT/message
 ```
+
+### Node-RED command structure
+
+![Automation box image](https://github.com/tinel-c/PlatformIO_ESP8266_Second_gate_automation/blob/main/img/Node_red_automation.PNG?raw=true)

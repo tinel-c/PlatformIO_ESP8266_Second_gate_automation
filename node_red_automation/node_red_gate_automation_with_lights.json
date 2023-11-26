@@ -1,0 +1,734 @@
+[
+    {
+        "id": "0dfa01e39586f4fd",
+        "type": "mqtt in",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/STAT/Relay1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "73850d9f081d4c01",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "9078dcc9a362eb8a"
+            ]
+        ]
+    },
+    {
+        "id": "b0e7b6fbd5b6ad29",
+        "type": "ui_switch",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "label": "Deschide",
+        "tooltip": "",
+        "group": "f0ab848c9c25cfc7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 680,
+        "y": 100,
+        "wires": [
+            [
+                "57285d1cc57fa4d8"
+            ]
+        ]
+    },
+    {
+        "id": "57285d1cc57fa4d8",
+        "type": "mqtt out",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/CMD/Relay1",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "73850d9f081d4c01",
+        "x": 950,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "73b4f198a35ee3f6",
+        "type": "mqtt in",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/STAT/Relay2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "73850d9f081d4c01",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "f9007464f29395b5"
+            ]
+        ]
+    },
+    {
+        "id": "eacf87b424e3eb01",
+        "type": "ui_switch",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "label": "Inchide",
+        "tooltip": "",
+        "group": "f0ab848c9c25cfc7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 680,
+        "y": 160,
+        "wires": [
+            [
+                "de3a0dd5118ced7b"
+            ]
+        ]
+    },
+    {
+        "id": "de3a0dd5118ced7b",
+        "type": "mqtt out",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/CMD/Relay2",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "73850d9f081d4c01",
+        "x": 950,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "f9007464f29395b5",
+        "type": "change",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "OFF",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ON",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "eacf87b424e3eb01"
+            ]
+        ]
+    },
+    {
+        "id": "9078dcc9a362eb8a",
+        "type": "change",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "OFF",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ON",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 100,
+        "wires": [
+            [
+                "b0e7b6fbd5b6ad29"
+            ]
+        ]
+    },
+    {
+        "id": "f9e4e2328212a77c",
+        "type": "mqtt in",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/STAT/Relay3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "73850d9f081d4c01",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "149ee902d202547c"
+            ]
+        ]
+    },
+    {
+        "id": "d98c15c67766ce5d",
+        "type": "ui_switch",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "label": "Trigger",
+        "tooltip": "",
+        "group": "f0ab848c9c25cfc7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 680,
+        "y": 220,
+        "wires": [
+            [
+                "fb063873ee362e62"
+            ]
+        ]
+    },
+    {
+        "id": "fb063873ee362e62",
+        "type": "mqtt out",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/CMD/Relay3",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "73850d9f081d4c01",
+        "x": 950,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "149ee902d202547c",
+        "type": "change",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "OFF",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ON",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "d98c15c67766ce5d"
+            ]
+        ]
+    },
+    {
+        "id": "f723461ba2cccfde",
+        "type": "mqtt in",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/STAT/Relay4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "73850d9f081d4c01",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "6902165ce12a342e"
+            ]
+        ]
+    },
+    {
+        "id": "81107ae8e0893d37",
+        "type": "ui_switch",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "label": "Stop",
+        "tooltip": "",
+        "group": "f0ab848c9c25cfc7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "f938beb2013f4347"
+            ]
+        ]
+    },
+    {
+        "id": "f938beb2013f4347",
+        "type": "mqtt out",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/CMD/Relay4",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "73850d9f081d4c01",
+        "x": 950,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6902165ce12a342e",
+        "type": "change",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "OFF",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ON",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 280,
+        "wires": [
+            [
+                "81107ae8e0893d37"
+            ]
+        ]
+    },
+    {
+        "id": "7df932c9b9323794",
+        "type": "comment",
+        "z": "402ae319d72eccf6",
+        "name": "Gate automation",
+        "info": "",
+        "x": 140,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ca022a88ad05e408",
+        "type": "comment",
+        "z": "402ae319d72eccf6",
+        "name": "Light automation",
+        "info": "",
+        "x": 140,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "99bc9f8280a64828",
+        "type": "mqtt in",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/STAT/Relay5",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "73850d9f081d4c01",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "1268d4583c6e028d"
+            ]
+        ]
+    },
+    {
+        "id": "888bdf10d859f5c5",
+        "type": "ui_switch",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "label": "Left light",
+        "tooltip": "",
+        "group": "f0ab848c9c25cfc7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 680,
+        "y": 400,
+        "wires": [
+            [
+                "85fcde512f4b4b9e"
+            ]
+        ]
+    },
+    {
+        "id": "85fcde512f4b4b9e",
+        "type": "mqtt out",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/CMD/Relay5",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "73850d9f081d4c01",
+        "x": 950,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1268d4583c6e028d",
+        "type": "change",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "OFF",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ON",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 400,
+        "wires": [
+            [
+                "888bdf10d859f5c5"
+            ]
+        ]
+    },
+    {
+        "id": "5da0c869e3f99ce6",
+        "type": "mqtt in",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/STAT/Relay6",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "73850d9f081d4c01",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "f2b6f2bc207e40ca"
+            ]
+        ]
+    },
+    {
+        "id": "eece975f5a1bab3b",
+        "type": "ui_switch",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "label": "Right light",
+        "tooltip": "",
+        "group": "f0ab848c9c25cfc7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 680,
+        "y": 460,
+        "wires": [
+            [
+                "0f0fb557876f4b2e"
+            ]
+        ]
+    },
+    {
+        "id": "0f0fb557876f4b2e",
+        "type": "mqtt out",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "topic": "SecondGate/CMD/Relay6",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "73850d9f081d4c01",
+        "x": 950,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f2b6f2bc207e40ca",
+        "type": "change",
+        "z": "402ae319d72eccf6",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "OFF",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ON",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 460,
+        "wires": [
+            [
+                "eece975f5a1bab3b"
+            ]
+        ]
+    },
+    {
+        "id": "73850d9f081d4c01",
+        "type": "mqtt-broker",
+        "name": "mqtt local",
+        "broker": "192.168.2.4",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f0ab848c9c25cfc7",
+        "type": "ui_group",
+        "name": "Automatizare poarta",
+        "tab": "d8f9da260f68b17a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d8f9da260f68b17a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
