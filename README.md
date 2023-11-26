@@ -11,7 +11,7 @@ Also allows led strips to be commanded with mqtt commands.
 
 ## Schematic overview of the project
 
-![Automation box image](https://github.com/tinel-c/PlatformIO_ESP8266_Second_gate_automation/blob/main/img/Gate_automation.png?raw=true)
+![Automation box image](https://github.com/tinel-c/PlatformIO_ESP8266_Second_gate_automation/blob/main/img/Second_gate_automation_schematic.png?raw=true)
 
 ### HW used in the project
 
